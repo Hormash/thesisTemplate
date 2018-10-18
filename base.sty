@@ -1,0 +1,117 @@
+\include{constantes}
+\usepackage{amssymb}%simbolos matemáticos
+\usepackage{amsmath}
+\usepackage[spanish, mexico, es-tabla, es-nodecimaldot,activeacute]{babel}
+\usepackage[T1]{fontenc}%no esto puedo seleccionar tildes
+\usepackage{wrapfig}
+
+\renewcommand*{\tableautorefname}{Tabla}
+\newcommand{\quotes}[1]{``#1''}
+
+\newcommand{\mes}{\ifcase \month \or Enero\or Febrero\or Marzo\or Abril\or Mayo\or Junio\or Julio\or Augosto\or Septiembre\or Octubre\or Noviembre\or Diciembre\fi} 
+\newcommand {\fechaPortada}{\mes\space- \number \year}
+\newcommand {\fechaOriginalidad}{\mes\space de \number \year}
+\renewcommand{\bibname}{Referencias}
+\setcounter{tocdepth}{1}
+\renewcommand{\contentsname}{Tabla de Contenidos}
+\newcommand{\portada}{
+\newgeometry{left=1cm,bottom=1cm,top=1cm,right=1cm}
+	{\centering
+		\includegraphics[width=6cm]{images/unab.eps} \\ 
+		\MakeUppercase{\universidad} \\
+		FACULTAD DE \MakeUppercase{\facultad} \\
+		DEPARTAMENTO DE \MakeUppercase{\departamento} \\
+		\MakeUppercase{\carrera} \\
+		
+		\vspace{\fill}
+		
+		{\huge \titulo } \\
+		
+		\vspace{\fill}
+		
+		\nombre \\
+		
+		\vspace{\fill}
+		
+		Profesor guía:\\ \profesor \\
+		
+		
+	}
+
+	\vspace{\fill}
+	{\raggedleft
+	TESIS PARA OPTAR AL TÍTULO DE \\
+	~\vspace{1cm}
+	\MakeUppercase{\carrera} \\
+	}
+
+	{\centering
+	\ubicacion \\
+	}
+\restoregeometry
+}
+
+\newcommand{\originalidad}{
+	{\centering
+		DEPARTAMENTO DE \MakeUppercase{\departamento} \\
+		
+		\MakeUppercase{\carrera} \\
+		
+		DECLARACIÓN DE ORIGINALIDAD Y PROPIEDAD \\
+		\vspace{1cm}
+	}
+	
+	Yo, \textbf{\nombre}, declaro que este documento no incorpora material de otros autores sin identificar debidamente la fuente. \\
+	
+	\vspace{\fill}
+	
+	{\raggedleft
+		Santiago, \fechaOriginalidad \\
+		\vspace{1cm}
+		--------------------------------------- \\
+		Firma del Alumno\\
+	}
+}
+
+\newcommand{\dedicatoria}{
+	{\raggedleft 
+		\textit{\include{chapters/dedicatoria}}
+	}
+}
+
+\newcommand{\agradecimientos}{
+	{\huge Agradecimientos}\\
+	
+	\textit{\input{chapters/agradecimientos}}
+}
+
+\newcommand{\resumen}{
+	{\huge Resumen}\\
+	
+	\input{chapters/abstract}
+}
+
+\newcommand{\indice}{
+	\tableofcontents % Imprime lista de contenidos
+	
+	\listoffigures % Imprime lista de figuras
+	
+	\listoftables % Imprime lista de tablas
+}
+
+
+
+
+\newcommand{\capitulos}{
+	\include{chapters}
+}
+
+
+\newcommand{\paginaReferencias}{
+	\bibliographystyle{apalike}
+	\bibliography{referencias}
+}
+
+\newcommand{\anexos}{
+	\input{chapters/anexos}
+}

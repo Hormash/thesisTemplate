@@ -1,0 +1,77 @@
+\documentclass[11pt,a4paper]{scrbook}
+%\documentclass[twoside,openright]{scrbook}
+\usepackage[utf8]{inputenc}
+\usepackage[dvipdfm, colorlinks=false, hidelinks]{hyperref}
+\usepackage{cleveref}
+\usepackage{graphicx}
+\usepackage{array,multirow}
+\usepackage{tabularx}
+\usepackage[export]{adjustbox}
+\usepackage{multirow}
+\usepackage{chngcntr}
+\usepackage[spanish,ruled,vlined,linesnumbered]{algorithm2e}
+\usepackage{listings}
+\usepackage{url}
+\usepackage{verbatim} % comentarios
+\counterwithin{table}{chapter}
+\renewcommand*{\chapterheadstartvskip}{\vspace*{0cm}}
+\usepackage{geometry}
+\usepackage{pdflscape}
+\geometry{total={215mm,279mm},
+	left=4cm,right=2.5cm,
+	top=4cm,bottom=2.5cm}
+\usepackage{booktabs}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{breakcites}
+\spacing{1.5}
+\usepackage{base}
+\usepackage{color}
+\usepackage{longtable}
+\usepackage{lipsum}
+\usepackage[usenames,dvipsnames,svgnames,table,xcdraw]{xcolor}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subfig}%me permite imagenes juntas
+%\usepackage{subcaption}%Permite hacer un caption por imagen pequeña (no se puede usar junto al paquete subfig)
+%\usepackage[none]{hyphenat}%para que no corte palabras
+\usepackage{supertabular}%para las tablas desde writer2latex
+\usepackage{tabulary}%tablas se ajusta
+\usepackage[newcommands]{ragged2e}%venia con la tabla de arriba
+\usepackage{rotating}%para Rotar Imagenes
+\graphicspath{ {images/} }
+
+\begin{document}
+	\frontmatter
+%----------------------------------------------------------------------------------------
+%	BASE DOCUMENTO
+%----------------------------------------------------------------------------------------
+	\portada
+	\newgeometry{left=4cm,bottom=2.5cm,top=4cm,right=2.5cm}
+	\newpage
+	\originalidad
+	\dedicatoria
+	\agradecimientos
+	\newpage
+	\resumen
+	\newpage
+	\indice
+	
+	%Parte numeración 1 - 2 - 3 - ...
+	\mainmatter
+	
+%----------------------------------------------------------------------------------------
+%	CAPITULOS
+%----------------------------------------------------------------------------------------
+	\capitulos
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAFIA
+%----------------------------------------------------------------------------------------
+	\paginaReferencias
+%----------------------------------------------------------------------------------------
+%	ANEXOS
+%----------------------------------------------------------------------------------------
+	\anexos
+	
+		
+\end{document}
